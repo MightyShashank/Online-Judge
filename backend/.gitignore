@@ -1,2 +1,9 @@
 # Ignore node_modules folder
 node_modules/
+
+# Ignore environment config file
+.env
+
+# Ignore build folder 
+build/
+dist/

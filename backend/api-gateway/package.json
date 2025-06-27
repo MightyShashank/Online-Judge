@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "api-gateway",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "express.js": "^1.0.0"
-  }
+  "description": ""
 }
