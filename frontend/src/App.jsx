@@ -1,11 +1,14 @@
 import './App.css'
 import LandingPage from './pages/landingPage'
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
-    <div>
-      <LandingPage/>
-    </div>
+    <RecoilRoot>
+      <div>
+        <LandingPage/>
+      </div>
+    </RecoilRoot>
   );
 }
 
