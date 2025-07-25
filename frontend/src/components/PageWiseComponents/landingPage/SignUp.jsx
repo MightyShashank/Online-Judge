@@ -21,6 +21,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import './custom_scrollbar.css';
+
 
 export default function SignUP() {
 
@@ -33,7 +35,7 @@ export default function SignUP() {
         <DialogTrigger asChild>
           <Button className="bg-indigo-500 rounded-md py-1.5 px-5 font-semibold cursor-pointer hover:bg-indigo-600">Sign Up</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px] bg-zinc-700 h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-zinc-800">
+        <DialogContent className="sm:max-w-[425px] bg-zinc-700 h-[600px] overflow-y-auto custom-scrollbar">
 
             {/* header */}
           <DialogHeader>
