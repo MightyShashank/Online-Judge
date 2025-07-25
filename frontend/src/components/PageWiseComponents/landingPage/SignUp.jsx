@@ -93,7 +93,7 @@ export default function SignUP() {
                         {/* Full name */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Full Name</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <input
                                 type="text"
                                 placeholder="Enter your full name"
@@ -105,7 +105,7 @@ export default function SignUP() {
                         {/* Email */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Email Address</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Mail className="w-5 h-5 mr-2" />
                                 <input
                                 type="email"
@@ -118,7 +118,7 @@ export default function SignUP() {
                         {/* Password */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Password</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Lock className="w-5 h-5 mr-2" />
                                 <input
                                 type={showPassword ? 'text' : 'password'}
@@ -142,7 +142,7 @@ export default function SignUP() {
                         {/* Confirm Password */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Confirm Password</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Lock className="w-5 h-5 mr-2" />
                                 <input
                                 type={showPassword ? 'text' : 'password'}
@@ -180,7 +180,7 @@ export default function SignUP() {
                         {/* Company name */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Company Name</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <input
                                 type="text"
                                 placeholder="Enter your company name"
@@ -192,7 +192,7 @@ export default function SignUP() {
                         {/* Email */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Email Address</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Mail className="w-5 h-5 mr-2" />
                                 <input
                                 type="email"
@@ -206,25 +206,26 @@ export default function SignUP() {
                         <div>
                             <label className="text-sm text-white mb-2 block">Company Size</label>
                             <Select>
-                                <SelectTrigger className="w-full">
-                                    <SelectValue placeholder="Select company size" />
+                                <SelectTrigger className="w-full text-white">
+                                    <SelectValue placeholder="Select company size" className="text-white" />
                                 </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="light">Select company size</SelectItem>
-                                    <SelectItem value="dark">1-10 employees</SelectItem>
-                                    <SelectItem value="system">11-50 employees</SelectItem>
-                                    <SelectItem value="dark1">51-200 employees</SelectItem>
-                                    <SelectItem value="system1">201-1000 employees</SelectItem>
-                                    <SelectItem value="dark2">1000+ employees</SelectItem>
+                                <SelectContent className="bg-zinc-700 border border-zinc-400 text-white">
+                                    <SelectItem value="default" disabled>Select company size</SelectItem>
+                                    <SelectItem value="1-10">1–10 employees</SelectItem>
+                                    <SelectItem value="11-50">11–50 employees</SelectItem>
+                                    <SelectItem value="51-200">51–200 employees</SelectItem>
+                                    <SelectItem value="201-1000">201–1000 employees</SelectItem>
+                                    <SelectItem value="1000+">1000+ employees</SelectItem>
                                 </SelectContent>
                             </Select>
+
                         </div>
                         
 
                         {/* Password */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Password</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Lock className="w-5 h-5 mr-2" />
                                 <input
                                 type={showPassword ? 'text' : 'password'}
@@ -248,7 +249,7 @@ export default function SignUP() {
                         {/* Confirm Password */}
                         <div>
                             <label className="text-sm text-white mb-2 block">Confirm Password</label>
-                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                            <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                                 <Lock className="w-5 h-5 mr-2" />
                                 <input
                                 type={showPassword ? 'text' : 'password'}
