@@ -1,7 +1,7 @@
 import React from 'react'
-import TopNavBar from '../components/landingPage/TopNavBar';
-import Footer from '../components/landingPage/Footer';
-import Main from '../components/landingPage/Main';
+import TopNavBar from '../components/PageWiseComponents/landingPage/TopNavBar'
+import Footer from '../components/PageWiseComponents/landingPage/Footer';
+import Main from '../components/PageWiseComponents/landingPage/Main';
 
 function landingPage() {
   return (

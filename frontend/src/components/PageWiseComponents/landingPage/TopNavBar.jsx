@@ -1,5 +1,7 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import Login from './Login';
+import SignUP from './SignUp';
 
 export default function TopNavBar() {
     return (
@@ -23,8 +25,8 @@ export default function TopNavBar() {
 
             {/* Login or Signup*/}
             <div className="flex gap-x-4 text-white items-center">
-                <div className="bg-zinc-800 rounded-md py-1 px-2 font-semibold cursor-pointer hover:text-indigo-500">Login</div>
-                <div className="bg-indigo-500 rounded-md py-1.5 px-5 font-semibold cursor-pointer hover:bg-indigo-600">Sign Up</div>
+                <Login/>
+                <SignUP/>
             </div>
 
         </div>
