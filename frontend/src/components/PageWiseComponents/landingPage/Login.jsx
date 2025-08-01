@@ -83,7 +83,7 @@ export default function Login() {
                     {/* Email */}
                     <div>
                         <label className="text-sm text-white mb-2 block">Email Address</label>
-                        <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                        <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                             <Mail className="w-5 h-5 mr-2" />
                             <input
                             type="email"
@@ -96,7 +96,7 @@ export default function Login() {
                     {/* Password */}
                     <div>
                         <label className="text-sm text-white mb-2 block">Password</label>
-                        <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center">
+                        <div className="flex items-center px-3 py-2 bg-zinc-600 rounded-md text-zinc-300 justify-center focus-within:ring-2 focus-within:ring-indigo-500">
                             <Lock className="w-5 h-5 mr-2" />
                             <input
                             type={showPassword ? 'text' : 'password'}

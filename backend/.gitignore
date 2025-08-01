@@ -1,9 +1,9 @@
-# Ignore node_modules folder
-node_modules/
+# Ignore all node_modules folders anywhere in the project
+**/node_modules/
 
-# Ignore environment config file
-.env
+# Ignore all .env files
+**/.env
 
-# Ignore build folder 
-build/
-dist/
+# Ignore all build and dist folders anywhere in the project
+**/build/
+**/dist/

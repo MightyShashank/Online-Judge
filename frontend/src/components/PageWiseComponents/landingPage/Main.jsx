@@ -36,9 +36,27 @@ export default function Main() {
 
             {/* Section 1 */}
             <div className="flex flex-col gap-y-7 w-full pb-28">
-                <div className="text-gray-300 font-semibold text-2xl text-center pt-44">
+                <div className="text-gray-300 font-semibold text-2xl text-center pt-24">
                     The ultimate collaborative platform for solving Data structures and <br/>
                     Algorithms problems with your team in real-time 
+                </div>
+                <div className="flex gap-x-4 justify-center">
+                    <div className="flex gap-x-2 justify-center items-center">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-zinc-400">Real-time collaboration</span>
+                    </div>
+                    <div className="flex gap-x-2 justify-center items-center">
+                        <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-zinc-400">Integrated video calls</span>
+                    </div>
+                    <div className="flex gap-x-2 justify-center items-center">
+                        <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-zinc-400">AI-powered hints</span>
+                    </div>
+                    <div className="flex gap-x-2 justify-center items-center">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-zinc-400">Interactive whiteboard</span>
+                    </div>
                 </div>
                 <div className="flex gap-x-4 justify-center">
                     <div className="py-3 px-6 flex gap-x-2 text-base font-normal items-center bg-indigo-500 rounded-md cursor-pointer transform transition duration-300 ease-in-out hover:bg-indigo-600 hover:scale-105">
@@ -49,6 +67,23 @@ export default function Main() {
                     <div className="py-3 px-6 flex gap-x-2 text-base font-normal items-center bg-none border border-indigo-500 rounded-md cursor-pointer transform transition duration-300 ease-in-out text-indigo-500 hover:text-white">
                         <Icon icon="mdi-light:play" width="30" height="30" className="" />
                         <div className="">Watch Demo</div>
+                    </div>
+                </div>
+                <div className="flex flex-col justify-center gap-y-2">
+                    <div className="text-gray-300 text-center w-full">Join thousands of developers already collaborating</div>
+                    <div className="flex justify-center gap-x-4">
+                        <div className="flex gap-x-2 justify-center items-center">
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <span className="text-xs font-medium text-zinc-400">Free to start</span>
+                        </div>
+                        <div className="flex gap-x-2 justify-center items-center">
+                            <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></div>
+                            <span className="text-xs font-medium text-zinc-400">No credit card required</span>
+                        </div>
+                        <div className="flex gap-x-2 justify-center items-center">
+                            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+                            <span className="text-xs font-medium text-zinc-400">Setup in 30 seconds</span>
+                        </div>
                     </div>
                 </div>
             </div>
