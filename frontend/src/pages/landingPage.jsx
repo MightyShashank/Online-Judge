@@ -23,11 +23,11 @@ import {
   Phone,
 } from "lucide-react"
 
-function landingPage() {
+function landingPage({ navigate }) {
   return (
     <div className='bg-zinc-800 h-full w-full'>
         <header className='px-20'>
-            <TopNavBar/>
+            <TopNavBar navigate={navigate}/>
         </header>
 
         {/* Announcement Banner */}

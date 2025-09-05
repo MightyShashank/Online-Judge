@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webhook-server-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "webhook-server-ip"
+    networking.gke.io/managed-certificates: "gke-managed-cert"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  rules:
+  - host: codecollabapi.codecollab.co.in
+    http:
+      paths:
+      # This is now a catch-all rule that sends ALL traffic
+      # to your new API Gateway service.
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: api-gateway-internal
+            port:
+              number: 80

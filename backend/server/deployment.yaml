@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webhook-server
+  labels:
+    app: webhook-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webhook-server
+  template:
+    metadata:
+      labels:
+        app: webhook-server
+    spec:
+      containers:
+      - name: webhook-server
+        image: mightyshashank/codecollab:web-hook-server-image-v57
+        ports:
+        - containerPort: 3000
+        
+        # --- This section injects all key-value pairs from your ConfigMap and Secret ---
+        envFrom:
+        - configMapRef:
+            name: webhook-server-config # Reference the ConfigMap you created
+        - secretRef:
+            name: webhook-server-secrets # Reference the Secret you created
+            
+        # --- Point to the Service Account Key ---
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /var/secrets/google/key.json # Path to the mounted key file
+          
+        # --- NEW: Added resource requests and limits ---
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
+            
+        readinessProbe:
+          httpGet:
+            path: /healthy
+            port: 3000
+        livenessProbe:
+          httpGet:
+            path: /healthy
+            port: 3000
+            
+        # --- Mount the secret file as a volume ---
+        volumeMounts:
+        - name: gcs-key-volume
+          mountPath: /var/secrets/google
+          readOnly: true
+          
+      # --- Define the volume from the secret ---
+      volumes:
+      - name: gcs-key-volume
+        secret:
+          secretName: gcs-key-secret

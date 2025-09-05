@@ -1,0 +1,27 @@
+# filename: kong-values.yaml
+
+# This file is used to override the default settings of the Kong Helm chart.
+# We are lowering the resource requests to fit within a smaller cluster.
+
+# Set the number of Kong gateway replicas.
+replicaCount: 1
+
+# Define resource requests and limits for the main Kong proxy container.
+proxy:
+  resources:
+    requests:
+      cpu: "100m"      # Request 0.25 of a CPU core
+      memory: "128Mi"  # Request 256 Megabytes of memory
+    limits:
+      cpu: "250m"      # Limit usage to 0.5 of a CPU core
+      memory: "256Mi"  # Limit usage to 512 Megabytes of memory
+
+# Define resource requests and limits for the Ingress controller container.
+ingressController:
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "200m"
+      memory: "256Mi"

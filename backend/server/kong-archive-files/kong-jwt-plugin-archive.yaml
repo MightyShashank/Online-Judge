@@ -1,0 +1,55 @@
+# filename: kong-jwt-plugin.yaml
+
+# This defines the JWT validation plugin configuration.
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: jwt-validator
+config:
+  key_claim_name: Authorization
+plugin: jwt
+
+---
+
+# This updates our Kong Ingress to use the plugin.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: microservice-routes # Must match the name of your Kong Ingress
+  annotations:
+    kubernetes.io/ingress.class: kong
+    # This annotation applies the 'jwt-validator' plugin to ALL routes in this Ingress.
+    konghq.com/plugins: jwt-validator
+spec:
+  # The 'rules' section remains the same as in kong-routes.yaml
+  rules:
+  - http:
+      paths:
+      - path: /api/auth
+        pathType: Prefix
+        backend:
+          service:
+            name: auth-server-internal
+            port:
+              number: 80
+      - path: /parse-problem-url
+        pathType: Prefix
+        backend:
+          service:
+            name: url-parser-internal
+            port:
+              number: 80
+      - path: /generate-boilerplate
+        pathType: Prefix
+        backend:
+          service:
+            name: boilerplate-server-internal
+            port:
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webhook-server-internal 
+            port:
+              number: 80

@@ -1,0 +1,44 @@
+# filename: kong-routes.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: microservice-routes
+  annotations:
+    # This annotation tells Kubernetes that this Ingress is for Kong.
+    kubernetes.io/ingress.class: kong
+spec:
+  rules:
+  - http:
+      paths:
+      # Route for the Auth server
+      - path: /api/auth
+        pathType: Prefix
+        backend:
+          service:
+            name: auth-server-internal
+            port:
+              number: 80
+      # Route for the URL Parser server
+      - path: /parse-problem-url
+        pathType: Prefix
+        backend:
+          service:
+            name: url-parser-internal
+            port:
+              number: 80
+      # Route for the boilerplate server
+      - path: /generate-boilerplate
+        pathType: Prefix
+        backend:
+          service:
+            name: boilerplate-server-internal
+            port:
+              number: 80
+      # Route for the main webhook server
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webhook-server-internal 
+            port:
+              number: 80
