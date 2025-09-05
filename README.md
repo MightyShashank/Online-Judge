@@ -71,7 +71,7 @@
 Distributed under the MIT License. See LICENSE for more information.  
 
 - 📧 **Contact**  
-**Shashank Appu** — [LinkedIn](https://www.linkedin.com/in/shashank-appu/) — shashankvactech@gmail.com  
+**Shashank** — [LinkedIn](https://www.linkedin.com/in/shashank-appu/) — shashankvactech@gmail.com  
 
 - 🔗 **Project Link**  
 [Online Judge](https://github.com/MightyShashank/Online-Judge)  
